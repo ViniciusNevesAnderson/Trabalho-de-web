@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <CATALOG>
+        <CD>
+            <LOJA>Loja A</LOJA>
+            <DESCONTO>30%</DESCONTO>
+        </CD>
+        <CD>
+            <LOJA>Loja B</LOJA>
+            <DESCONTO>50%</DESCONTO>
+        </CD>
+        <CD>
+            <LOJA>Loja C</LOJA>
+            <DESCONTO>20%</DESCONTO>
+        </CD>
+        <CD>
+            <LOJA>Loja D</LOJA>
+            <DESCONTO>40%</DESCONTO>
+        </CD>
+    </CATALOG>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <a href="index.html" class="btn btn-warning btn-lg">Voltar ao Início</a>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            padding: 5%;
+            border-radius: 2%;
+            box-shadow: 0 4% 10% rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #343a40;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 2%;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        th, td {
+            vertical-align: middle;
+            padding: 2%;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Estacionamento</h1>
+        <h2 class="my-4">Adicionar Novo Carro</h2>
+
+        <form id="formulario">
+            <div id="tarifaContainer" class="form-group">
+                <label for="tarifa">Tarifa (R$):</label>
+                <input type="number" id="tarifa" class="form-control" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carro">Carro:</label>
+                <input type="text" id="carro" class="form-control" placeholder="Modelo do carro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" class="form-control" placeholder="Placa do carro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="horario_de_chegada">Horário de Chegada:</label>
+                <input type="text" id="horario_de_chegada" class="form-control" placeholder="Entre 4 e 23 (em horas)" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="horario_de_saida">Horário de Saída:</label>
+                <input type="text" id="horario_de_saida" class="form-control" placeholder="Entre 4 e 23 (em horas)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lojas">Lojas:</label>
+                <select id="lojas" class="form-control">
+                    <option value="Loja A - 30%">Loja A</option>
+                    <option value="Loja B - 50%">Loja B</option>
+                    <option value="Loja C - 20%">Loja C</option>
+                    <option value="Loja D - 40%">Loja D</option>
+                </select>
+            </div>
+                
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form> <br>
+
+        <h2 class="table table-striped" id="tabela">Tabela de Descontos</h2> 
+        
+        <button type="submit" onclick="loadDoc()" class="btn btn-primary">Carregar</button> <br><br>
+
+        <table class="table table-striped" id="tabela1">
+            <thead>
+                <tr>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <h2 class="table table-striped" id="tabela">Meus Carros</h2>
+
+        <table class="table table-striped" id="tabela2">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Carro</th>
+                    <th>Placa</th>
+                    <th>Horário de Chegada</th>
+                    <th>Horário de Saída</th>
+                    <th>Loja Para Desconto</th>
+                    <th>Total a Pagar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="tarifa.js"></script>
+
+</body>
+</html>
